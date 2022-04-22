@@ -56,9 +56,12 @@ addPoke.addEventListener("click", (e) => {
     let teamType = document.createElement("h2")
     let teamNumber = document.createElement("h4")
     teamName.textContent = pokeName.textContent
+    teamName.className = "flex justify-center capitalize"
     teamImg.src = pokeSprite.src
     teamType.textContent = pokeType.textContent
+    teamType.className = "flex justify-center capitalize"
     teamNumber.textContent = dexNumber.textContent
+    teamNumber.className = "flex justify-center capitalize"
     yourTeam.append(teamName, teamImg, teamType, teamNumber)
     teamCount += 1
     }

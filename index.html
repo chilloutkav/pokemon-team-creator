@@ -5,32 +5,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pokemon Team Creator</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Pokémon Team Creator</title>
+    <link rel="stylesheet" href="/styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
     <script src="index.js" defer></script>
 </head>
 
 <body>
-
-    <form class="form">
-        <p>Search For Pokemon!</p>
-        <label for="Pokemon">Pokemon:</label>
-        <input type="text" name="name" id="new-name">
-        <input type="submit" value="Search">
+    <h1 class="bg-red-500 flex justify-center text-4xl py-4">Choose Your Pokémon!</h1>
+    <form class="form flex justify-center space-x-4 bg-red-500 pb-4">
+        <label class="py-2 text-lg" for="Pokemon">Pokémon:</label>
+        <input class="border-2 rounded" placeholder="Name or Number" type="text" name="name" id="new-name">
+        <input class="bg-white hover:bg-blue-600 rounded py-2 px-4" type="submit" value="Search">
     </form>
 
-    <div class="pokemon-card">
-        <h1 class="pokemon-name">Pokemon Name</h1>
-        <img class="pokemon-sprite" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png"
-            alt="">
-        <h2 class="pokemon-type">Pokemon Type</h2>
-        <div class="move-container"></div>
-        <h4 class="dexNumber">Fill Me In</h4>
-        <button class="add-team">Add!</button>
+    <div class="pokemon-card flex justify-center grid auto-cols-auto bg-blue-500 pb-4">
+        <h1 class="pokemon-name flex justify-center py-6 capitalize">Pokémon Name</h1>
+        <img class="pokemon-sprite" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png">
+        <h2 class="pokemon-type flex justify-center capitalize">Pokémon Type</h2>
+        <div class="move-container capitalize"></div>
+        <h4 class="dexNumber flex justify-center">Fill Me In</h4>
+        <button class="add-team bg-red-500 hover:bg-red-600 rounded py-2 px-6" >Add!</button>
     </div>
 
-    <div class="your-team">
-        <h1>Your Pokemon Team</h1>
+    <h1 class="flex justify-center">Your Pokémon Team</h1>
+    <div class="your-team flex justify-center grid grid-rows-3">
     </div>
 
 </body>
