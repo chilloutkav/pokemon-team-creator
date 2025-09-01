@@ -11,26 +11,53 @@
     <script src="index.js" defer></script>
 </head>
 
-<body>
-    <h1 class="bg-red-500 flex justify-center text-4xl py-4">Choose Your Pokémon!</h1>
-    <form class="form flex justify-center space-x-4 bg-red-500 pb-4">
-        <label class="py-2 text-lg" for="Pokemon">Pokémon:</label>
-        <input class="border-2 rounded" placeholder="Name or Number" type="text" name="name" id="new-name">
-        <input class="bg-white hover:bg-blue-600 rounded py-2 px-4" type="submit" value="Search">
-    </form>
+<body class="min-h-screen bg-gradient-to-b from-blue-400 to-purple-600">
+    <!-- Header Section -->
+    <header class="bg-gradient-to-r from-red-500 to-red-600 shadow-lg">
+        <div class="container mx-auto px-4 py-6">
+            <h1 class="text-white text-3xl md:text-5xl font-bold text-center">Choose Your Pokémon!</h1>
+        </div>
+    </header>
 
-    <div class="pokemon-card flex justify-center grid auto-cols-auto bg-blue-500 pb-4">
-        <h1 class="pokemon-name flex justify-center py-6 capitalize">Pokémon Name</h1>
-        <img class="pokemon-sprite" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png">
-        <h2 class="pokemon-type flex justify-center capitalize">Pokémon Type</h2>
-        <div class="move-container capitalize"></div>
-        <h4 class="dexNumber flex justify-center">Fill Me In</h4>
-        <button class="add-team bg-red-500 hover:bg-red-600 rounded py-2 px-6" >Add!</button>
-    </div>
+    <!-- Search Section -->
+    <section class="bg-white shadow-md">
+        <div class="container mx-auto px-4 py-6">
+            <form class="form flex flex-col sm:flex-row items-center justify-center gap-4 max-w-lg mx-auto">
+                <label class="text-lg font-medium text-gray-700 sm:whitespace-nowrap" for="Pokemon">Search Pokémon:</label>
+                <input class="flex-1 border-2 border-gray-300 rounded-lg px-4 py-2 focus:border-blue-500 focus:outline-none" placeholder="Name or Number" type="text" name="name" id="new-name">
+                <div class="flex gap-2">
+                    <input class="bg-blue-500 hover:bg-blue-600 text-white font-medium rounded-lg py-2 px-6 cursor-pointer transition-colors" type="submit" value="Search">
+                    <button type="button" id="random-btn" class="bg-purple-500 hover:bg-purple-600 text-white font-medium rounded-lg py-2 px-6 transition-colors">Random</button>
+                </div>
+            </form>
+        </div>
+    </section>
 
-    <h1 class="flex justify-center">Your Pokémon Team</h1>
-    <div class="your-team flex justify-center grid grid-rows-3">
-    </div>
+    <!-- Pokemon Card Section -->
+    <section class="container mx-auto px-4 py-8">
+        <div class="pokemon-card max-w-md mx-auto bg-white rounded-xl shadow-lg overflow-hidden hidden" id="pokemon-display">
+            <div class="p-6 text-center">
+                <h1 class="pokemon-name text-2xl font-bold text-gray-800 mb-4 capitalize">Pokémon Name</h1>
+                <div class="mb-4">
+                    <img class="pokemon-sprite w-32 h-32 mx-auto hover:scale-110 transition-transform" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png">
+                </div>
+                <h2 class="pokemon-type text-lg font-semibold text-gray-600 mb-2 capitalize">Pokémon Type</h2>
+                <div class="move-container mb-4">
+                    <h3 class="text-sm font-medium text-gray-500 mb-2">Moves:</h3>
+                    <ul class="text-sm text-gray-600 capitalize"></ul>
+                </div>
+                <h4 class="dexNumber text-sm text-gray-500 mb-4">Fill Me In</h4>
+                <button class="add-team bg-green-500 hover:bg-green-600 text-white font-medium rounded-lg py-3 px-8 transition-colors">Add to Team!</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="container mx-auto px-4 py-8">
+        <h1 class="text-3xl font-bold text-white text-center mb-8">Your Pokémon Team</h1>
+        <div class="your-team grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4 max-w-6xl mx-auto">
+        </div>
+    </section>
 
 </body>
 
