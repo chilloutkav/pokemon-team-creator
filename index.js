@@ -70,8 +70,9 @@ form.addEventListener("submit", (e) => {
 
 //Display Pokemon Details in pokemon-card
 function displayPokeCard(data) {
-    pokeName.textContent = data.name    
+    pokeName.textContent = data.name
     pokeSprite.src = data.sprites.front_default
+    pokeSprite.alt = `${data.name} sprite`
     pokeType.textContent = data.types.map(type => type.type.name).join(', ')
     dexNumber.textContent = `#${data.id.toString().padStart(3, '0')}`
     
