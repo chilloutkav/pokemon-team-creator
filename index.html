@@ -7,6 +7,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokémon Team Creator - Build Your Dream Team | Kaven Kim</title>
     <meta name="description" content="Create your perfect Pokémon team with our interactive team builder. Search from all Pokémon, view their stats and moves, and build your dream team of six.">
+
+    <!-- Author and Keywords -->
+    <meta name="author" content="Kaven Kim">
+    <meta name="keywords" content="pokemon, team builder, pokedex, pokemon team creator, pokemon stats, pokemon moves, shiny pokemon">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://pokemon.kavenkim.com">
+
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Pokémon Team Creator - Build Your Dream Team">
+    <meta property="og:description" content="Create your perfect Pokémon team with our interactive team builder. Search from all Pokémon, view their stats and moves, and build your dream team of six.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pokemon.kavenkim.com">
+    <meta property="og:image" content="https://pokemon.kavenkim.com/og-image.png">
+    <meta property="og:site_name" content="Pokémon Team Creator">
+
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Pokémon Team Creator - Build Your Dream Team">
+    <meta name="twitter:description" content="Create your perfect Pokémon team with our interactive team builder. Search from all Pokémon, view their stats and moves, and build your dream team of six.">
+    <meta name="twitter:image" content="https://pokemon.kavenkim.com/og-image.png">
+    <meta name="twitter:creator" content="@kavenkim">
+
     <link rel="stylesheet" href="/styles.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="index.js" defer></script>
@@ -18,6 +41,36 @@
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-5CXC3C8');</script>
     <!-- End Google Tag Manager -->
+
+    <!-- SoftwareApplication Schema (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Pokémon Team Creator",
+      "applicationCategory": "GameApplication",
+      "description": "Interactive Pokémon team builder with stats, moves, and shiny variants. Search from 1000+ Pokémon and build your dream team of six.",
+      "url": "https://pokemon.kavenkim.com",
+      "creator": {
+        "@type": "Person",
+        "name": "Kaven Kim",
+        "url": "https://kavenkim.com"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "featureList": [
+        "Search 1000+ Pokémon by name or number",
+        "View detailed stats and moves for each Pokémon",
+        "Build teams of up to 6 Pokémon",
+        "Preview shiny variants on hover",
+        "Random Pokémon generator",
+        "Real-time PokéAPI integration"
+      ]
+    }
+    </script>
 </head>
 
 <body class="min-h-screen bg-gradient-to-b from-blue-400 to-purple-600">
